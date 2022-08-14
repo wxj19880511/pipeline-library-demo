@@ -13,7 +13,7 @@ pipeline {
     stages{
         stage('demo global vars') {
             steps {
-                echo 'Hello world'
+                log.info('Hello world')
                 sayHi '阳明'
                 println GlobalVars.foo
             }
@@ -22,8 +22,10 @@ pipeline {
         stage('demo function calls') {
             steps {
                 script {
-                    g =  new GlobalEnv(this)
-                    println g.login()
+                    sh "touch a.txt"
+                    def g = new GlobalEnv(this)
+                    g.login()
+                    log.warn('Logged you in')
                 }
             }
         }
