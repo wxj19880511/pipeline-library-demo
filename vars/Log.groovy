@@ -1,8 +1,8 @@
-def info(String message) {
+void info(String message) {
     echo "INFO: ${message}"
 }
 
-def warning(String message) {
+void warning(String message) {
     echo "WARNING: ${message}"
 }
 
