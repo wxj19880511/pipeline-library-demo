@@ -9,3 +9,5 @@ def warn(String msg) {
 def debug(String msg) {
     echo "[DEBUG] ${msg}" 
 }
+
+return this
