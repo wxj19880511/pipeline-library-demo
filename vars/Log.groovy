@@ -5,3 +5,5 @@ def info(String message) {
 def warning(String message) {
     echo "WARNING: ${message}"
 }
+
+return this

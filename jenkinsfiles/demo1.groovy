@@ -6,7 +6,6 @@ import com.qikqiak.GlobalEnv
 import com.qikqiak.GlobalVars
 
 
-
 pipeline {
     agent any 
 
