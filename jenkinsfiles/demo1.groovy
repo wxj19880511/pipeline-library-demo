@@ -5,6 +5,7 @@
 import com.qikqiak.GlobalEnv
 import com.qikqiak.GlobalVars
 
+def log = new Log()
 
 pipeline {
     agent any 
@@ -13,7 +14,7 @@ pipeline {
         stage('demo global vars') {
             steps {
                 script {
-                    Log.info 'test_script'
+                    log.info 'test_script'
                     sayHi '阳明'
                     println GlobalVars.foo
                 }
@@ -26,7 +27,8 @@ pipeline {
                     sh "touch a.txt"
                     def g = new GlobalEnv(this)
                     g.login()
-                    Log.warning('Logged you in')
+                    log.warning('Logged you in')
+                    log.error("some errors happens")
                 }
             }
         }
