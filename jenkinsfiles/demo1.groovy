@@ -28,7 +28,7 @@ pipeline {
                     def g = new GlobalEnv(this)
                     g.login()
                     log.warning('Logged you in')
-                    log.error("some errors happens")
+                  
                 }
             }
         }
