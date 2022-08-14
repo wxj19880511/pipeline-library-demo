@@ -20,8 +20,12 @@ pipeline {
         }
 
         stage('demo function calls') {
-            d g =  new GlobalEnv(this)
-            println g.login()
+            steps {
+                script {
+                    g =  new GlobalEnv(this)
+                    println g.login()
+                }
+            }
         }
     }
 }

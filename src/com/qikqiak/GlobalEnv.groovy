@@ -10,7 +10,7 @@ class GlobalEnv implements Serializable  {
     }
 
     def login() {
-        if (fileExists("a.txt")) {
+        if (steps.fileExists("a.txt")) {
             steps.sh "ls -alt a.txt"
         } else {
             steps.sh "echo file a.txt not exits"
