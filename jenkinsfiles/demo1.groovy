@@ -14,7 +14,7 @@ pipeline {
         stage('demo global vars') {
             steps {
                 script {
-                    Log.info 'Hello world'
+                    Log.info('Hello world')
                     sayHi '阳明'
                     println GlobalVars.foo
                 }
@@ -27,7 +27,7 @@ pipeline {
                     sh "touch a.txt"
                     def g = new GlobalEnv(this)
                     g.login()
-                    log.warn('Logged you in')
+                    Log.warning('Logged you in')
                 }
             }
         }
