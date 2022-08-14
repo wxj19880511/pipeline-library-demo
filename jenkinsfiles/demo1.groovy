@@ -13,7 +13,7 @@ pipeline {
         stage('demo global vars') {
             steps {
                 script {
-                    Log.info('test_script')
+                    Log.info 'test_script'
                     sayHi '阳明'
                     println GlobalVars.foo
                 }
