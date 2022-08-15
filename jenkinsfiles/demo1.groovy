@@ -11,6 +11,40 @@ pipeline {
     agent any 
 
     stages{
+
+        stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            choice(
+                                choices: myParametres(), 
+                                name: 'PARAMETER_01'
+                            ),
+                            booleanParam(
+                                defaultValue: true, 
+                                description: '', 
+                                name: 'BOOLEAN'
+                            ),
+                            text(
+                                defaultValue: '''
+                                this is a multi-line 
+                                string parameter example
+                                ''', 
+                                 name: 'MULTI-LINE-STRING'
+                            ),
+                            string(
+                                defaultValue: 'scriptcrunch', 
+                                name: 'STRING-PARAMETER', 
+                                trim: true
+                            )
+                        ])
+                    ])
+                }
+            }
+        }
+
+
         stage('demo global vars') {
             steps {
                 script {
