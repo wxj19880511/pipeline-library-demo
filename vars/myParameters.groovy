@@ -1,8 +1,9 @@
 #!/usr/bin/env groovy
 
-def log = new Log()
+
 
 def call() {
+    def log = new Log()
     log.info("Try to fetching parameters for type")
     sh "pwd"
     return ['a', 'b', 'c']
