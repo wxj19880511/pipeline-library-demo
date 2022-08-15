@@ -18,7 +18,7 @@ pipeline {
                     properties([
                         parameters([
                             choice(
-                                choices: myParametres(), 
+                                choices: myParameters(), 
                                 name: 'PARAMETER_01'
                             ),
                             booleanParam(
