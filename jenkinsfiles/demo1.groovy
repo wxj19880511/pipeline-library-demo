@@ -18,6 +18,7 @@ pipeline {
                     properties([
                         parameters([
                             choice(
+                                // dynamic parameters
                                 choices: myParameters(), 
                                 name: 'PARAMETER_01'
                             ),
