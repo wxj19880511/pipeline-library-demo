@@ -1,7 +1,5 @@
 #!/usr/bin/env groovy
 
-@Library('pipeline-library-demo') _
-
 import com.qikqiak.GlobalEnv
 import com.qikqiak.GlobalVars
 
