@@ -19,6 +19,7 @@ pipeline {
                         parameters([
                             choice(
                                 // dynamic parameters
+                                // make a test
                                 choices: myParameters(), 
                                 name: 'PARAMETER_01'
                             ),
